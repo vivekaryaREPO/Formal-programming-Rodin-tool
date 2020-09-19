@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.witness name="'" org.eventb.core.label="element'" org.eventb.core.predicate="element' = poppedResult'"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="isStackFull≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="isStackEmpty ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="poppedResult :∈ ELEMENT" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="arrayAsStack≔∅" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Stack_ctx"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="Stack"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="isStackFull"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="isStackEmpty"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="poppedResult"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="arrayAsStack"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv1" org.eventb.core.predicate="arrayAsStack ∈ 0‥top−1 → ELEMENT"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv2" org.eventb.core.predicate="finite(arrayAsStack)"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv3" org.eventb.core.predicate="card(arrayAsStack) = top"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv4" org.eventb.core.predicate="dom(arrayAsStack) = dom(stack)"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv5" org.eventb.core.predicate="ran(arrayAsStack) = ran(stack)"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv6" org.eventb.core.predicate="poppedResult ∈ ELEMENT"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv7" org.eventb.core.predicate="arrayAsStack = stack"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv8" org.eventb.core.predicate="isStackFull ∈ BOOL"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="inv9" org.eventb.core.predicate="isStackEmpty ∈ BOOL"/>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="push">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="push"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="card(arrayAsStack) &lt; maxsize"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="newElement ∈ ELEMENT"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="card(arrayAsStack)=card(arrayAsStack) + card(arrayAsStack ∩ {card(arrayAsStack) ↦ newElement})"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="arrayAsStack ≔ arrayAsStack ∪ {card(arrayAsStack) ↦ newElement}" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="newElement"/>
+<org.eventb.core.witness name="." org.eventb.core.label="e" org.eventb.core.predicate="newElement=e"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="pop">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="pop"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="card(arrayAsStack) &gt; 0"/>
+<org.eventb.core.witness name=")" org.eventb.core.label="element'" org.eventb.core.predicate="element' = poppedResult'"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="poppedResult ≔ arrayAsStack(card(arrayAsStack)−1)" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="arrayAsStack ≔ {card(arrayAsStack)−1} ⩤ arrayAsStack" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd2" org.eventb.core.predicate="finite({card(arrayAsStack) − 1} ⩤ arrayAsStack)"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="card({card(arrayAsStack)−1} ⩤ arrayAsStack) = card(arrayAsStack)−1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="empty">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="empty"/>
+<org.eventb.core.witness name="(" org.eventb.core.label="query'" org.eventb.core.predicate="query' = isStackEmpty'"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="isStackEmpty :∣ (card(arrayAsStack) = 0 ⇒ isStackEmpty' = TRUE) ∧ (card(arrayAsStack) &gt; 0 ⇒ isStackEmpty' = FALSE)" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="full">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="full"/>
+<org.eventb.core.witness name="(" org.eventb.core.label="query'" org.eventb.core.predicate="query' = isStackFull'"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="isStackFull :∣ (card(arrayAsStack) = maxsize ⇒ isStackFull'=TRUE) ∧ (card(arrayAsStack) ≠ maxsize ⇒ isStackFull' = FALSE)" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

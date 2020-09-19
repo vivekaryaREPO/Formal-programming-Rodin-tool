@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="internal_evt11" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal_act1" org.eventb.core.assignment="papersarr ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal_act2" org.eventb.core.assignment="num ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="internal_act3" org.eventb.core.assignment="status≔ absent" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.refinesMachine name="internal_1" org.eventb.core.target="Papers"/>
+<org.eventb.core.seesContext name="internal_1" org.eventb.core.target="PapersR_ctx"/>
+<org.eventb.core.variable name="internal_var1" org.eventb.core.identifier="papersarr"/>
+<org.eventb.core.variable name="internal_var2" org.eventb.core.identifier="num"/>
+<org.eventb.core.event name="internal_inv4J" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="addpaper">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="addpaper"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="addp"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="addp ∈ HOUSE ∖ dom(papersarr)"/>
+<org.eventb.core.witness name="*" org.eventb.core.label="p" org.eventb.core.predicate="addp=p"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="papersarr ≔ papersarr ∪ {addp ↦ present}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="num ≔ num + 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="internal_inv4K" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="removepaper">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="removepaper"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="rmvp"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="rmvp ∈ dom(papersarr)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="papersarr(rmvp) = present"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="num−1=card(dom(papersarr) ∖ {rmvp})"/>
+<org.eventb.core.witness name="," org.eventb.core.label="p" org.eventb.core.predicate="rmvp = p"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="num ≔ num − 1" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="papersarr ≔ papersarr ∖ {rmvp ↦ present}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="internal_inv4L" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="paperquery">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="paperquery"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="paperquery"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="paperquery ∈ HOUSE"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="status :∣ (papersarr[{paperquery}] = {present}⇒status'=present)∧(papersarr[{paperquery}] ≠ {present}⇒status'=absent)" org.eventb.core.label="act1"/>
+<org.eventb.core.witness name="," org.eventb.core.label="answer'" org.eventb.core.predicate="(answer' = TRUE ⇔ status'=present) ∧ (answer' = FALSE ⇔ status'=absent)"/>
+<org.eventb.core.witness name="-" org.eventb.core.label="p" org.eventb.core.predicate="paperquery =p"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="internal_inv4N" org.eventb.core.identifier="status"/>
+<org.eventb.core.invariant name="internal_inv4O" org.eventb.core.label="inv1" org.eventb.core.predicate="papersarr ∈ HOUSE ⇸ STATUS"/>
+<org.eventb.core.invariant name="internal_inv4P" org.eventb.core.label="inv2" org.eventb.core.predicate="num ∈ ℕ"/>
+<org.eventb.core.invariant name="internal_inv4Q" org.eventb.core.label="inv3" org.eventb.core.predicate="papers = papersarr∼[{present}]"/>
+<org.eventb.core.invariant name="internal_inv4R" org.eventb.core.label="inv4" org.eventb.core.predicate="finite(papers)"/>
+<org.eventb.core.invariant name="internal_inv4S" org.eventb.core.label="inv5" org.eventb.core.predicate="num = card(papers)"/>
+<org.eventb.core.invariant name="internal_inv4U" org.eventb.core.label="inv7" org.eventb.core.predicate="answer = TRUE ⇔ status = present"/>
+<org.eventb.core.invariant name="internal_inv4T" org.eventb.core.label="inv6" org.eventb.core.predicate="status ∈ STATUS"/>
+<org.eventb.core.invariant name="internal_inv4V" org.eventb.core.label="inv8" org.eventb.core.predicate="answer = FALSE ⇔ status = absent"/>
+<org.eventb.core.invariant name="internal_inv4W" org.eventb.core.label="inv9" org.eventb.core.predicate="papers = dom(papersarr)"/>
+</org.eventb.core.machineFile>

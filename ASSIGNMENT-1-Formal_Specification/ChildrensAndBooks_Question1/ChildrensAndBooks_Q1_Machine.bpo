@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="12">
+<org.eventb.core.poIdentifier name="AllBooks" org.eventb.core.type="ℙ(AllBooks)"/>
+<org.eventb.core.poIdentifier name="AllChildren" org.eventb.core.type="ℙ(AllChildren)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poIdentifier name="booksReadCount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="booksUnread" org.eventb.core.type="AllBooks"/>
+<org.eventb.core.poIdentifier name="hasread" org.eventb.core.type="ℙ(AllChildren×AllBooks)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPChildrensAndBooks_Q1_Ct\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act3/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPChildrensAndBooks_Q1_Ct\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AllBooks≠(∅ ⦂ ℙ(AllBooks))" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPChildrensAndBooks_Q1_Ct\|"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTChildrensAndBooks_Q1_Ct|" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poIdentifier name="booksReadCount'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="booksUnread'" org.eventb.core.type="AllBooks"/>
+<org.eventb.core.poIdentifier name="hasread'" org.eventb.core.type="ℙ(AllChildren×AllBooks)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPChildrensAndBooks_Q1_Ct|" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTChildrensAndBooks_Q1_Ct\|" org.eventb.core.poStamp="34"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTChildrensAndBooks_Q1_Ct}" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poIdentifier name="bookread" org.eventb.core.type="AllBooks"/>
+<org.eventb.core.poIdentifier name="hasread'" org.eventb.core.type="ℙ(AllChildren×AllBooks)"/>
+<org.eventb.core.poIdentifier name="child" org.eventb.core.type="AllChildren"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPChildrensAndBooks_Q1_Ct}" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTChildrensAndBooks_Q1_Ct}" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="child∈AllChildren" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="bookread∈AllBooks" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#\/|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="newbook/act1/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPChildrensAndBooks_Q1_Ct~"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="AllBooks ∖ hasread[{child}]≠(∅ ⦂ ℙ(AllBooks))" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#0|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#0|org.eventb.core.action#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPChildrensAndBooks_Q1_Ct~"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTChildrensAndBooks_Q1_Ct~" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poIdentifier name="booksUnread'" org.eventb.core.type="AllBooks"/>
+<org.eventb.core.poIdentifier name="child" org.eventb.core.type="AllChildren"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPChildrensAndBooks_Q1_Ct~" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTChildrensAndBooks_Q1_Ct~" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="child∈AllChildren" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#0|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="AllBooks ∖ hasread[{child}]≠(∅ ⦂ ℙ(AllBooks))" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#0|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="books_query/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPChildrensAndBooks_Q1_Cu'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="card(hasread[{child}])∈ℕ" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poSequent#books_query\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="books_query/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPChildrensAndBooks_Q1_Cu'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(hasread[{child}])" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#1|org.eventb.core.action#("/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#1|org.eventb.core.action#("/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPChildrensAndBooks_Q1_Cu'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTChildrensAndBooks_Q1_Cu'" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="booksReadCount'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="child" org.eventb.core.type="AllChildren"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPChildrensAndBooks_Q1_Cu'" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTChildrensAndBooks_Q1_Cu'" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="child∈AllChildren" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(hasread[{child}])" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="hasread∈AllChildren ↔ AllBooks" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="booksUnread∈AllBooks" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="booksReadCount∈ℕ" org.eventb.core.source="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Machine.bum|org.eventb.core.machineFile#ChildrensAndBooks_Q1_Machine|org.eventb.core.invariant#."/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

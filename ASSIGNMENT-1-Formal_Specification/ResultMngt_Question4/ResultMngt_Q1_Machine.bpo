@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="STUDENTS" org.eventb.core.type="ℙ(STUDENTS)"/>
+<org.eventb.core.poIdentifier name="MARKS" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.poIdentifier name="PASS_MARK" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="PASS_MARL" org.eventb.core.predicate="MARKS=0 ‥ 100" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q4_Ctx.buc|org.eventb.core.contextFile#ResultMngt_Q4_Ctx|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="PASS_MARM" org.eventb.core.predicate="PASS_MARK∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q4_Ctx.buc|org.eventb.core.contextFile#ResultMngt_Q4_Ctx|org.eventb.core.axiom#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="35">
+<org.eventb.core.poIdentifier name="exam_marks" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="examsCount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="highestScore" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="registered" org.eventb.core.type="ℙ(STUDENTS)"/>
+<org.eventb.core.poIdentifier name="resit1_marks" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="resit2_marks" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="student_results" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(STUDENTS×ℤ))∈(∅ ⦂ ℙ(STUDENTS)) ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(STUDENTS×ℤ))∈(∅ ⦂ ℙ(STUDENTS)) ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(STUDENTS×ℤ))∈(∅ ⦂ ℙ(STUDENTS)) ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#INITIALISATION\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu(">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="highestScore'∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'|org.eventb.core.action#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="highestScore'∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#INITIALISATION\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(STUDENTS×ℤ))∈(∅ ⦂ ℙ(STUDENTS)) ↔ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#INITIALISATION\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act6/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="MARKS≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'|org.eventb.core.action#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#'|org.eventb.core.action#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTResultMngt_Q4_Cu(" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="resit1_marks'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="exam_marks'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="highestScore'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(STUDENTS)"/>
+<org.eventb.core.poIdentifier name="student_results'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="resit2_marks'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="examsCount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPResultMngt_Q4_Cu(" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTResultMngt_Q4_Cu(" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="register/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="exam_marks∈registered∪{student} ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#register\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="register/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="resit1_marks∈registered∪{student} ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#register\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="register/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="resit2_marks∈registered∪{student} ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#register\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="register/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="student_results∈registered∪{student} ↔ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#register\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTResultMngt_Q4_Cu)" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="student" org.eventb.core.type="STUDENTS"/>
+<org.eventb.core.poIdentifier name="registered'" org.eventb.core.type="ℙ(STUDENTS)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPResultMngt_Q4_Cu)" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTResultMngt_Q4_Cu)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="student∈STUDENTS ∖ registered" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#;|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="exam_mark/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="exam_marks∪{student ↦ marks}∈registered ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#0"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#exam_mark\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="exam_mark/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu*"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="student_results∪{student ↦ marks}∈registered ↔ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#="/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#exam_mark\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTResultMngt_Q4_Cu*" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="exam_marks'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="student" org.eventb.core.type="STUDENTS"/>
+<org.eventb.core.poIdentifier name="student_results'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="marks" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPResultMngt_Q4_Cu*" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTResultMngt_Q4_Cu*" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="student∈registered ∖ dom(exam_marks)" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#=|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="marks∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#=|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="resit1_mark/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu+)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="student∈dom(exam_marks)∧exam_marks∈STUDENTS ⇸ ℤ" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu+)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="resit1_mark/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="resit1_marks∪{student ↦ marks}∈registered ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#&gt;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#resit1_mark\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="resit1_mark/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu+"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="student_results∪{student ↦ marks}∈registered ↔ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#&gt;"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#resit1_mark\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTResultMngt_Q4_Cu+" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="resit1_marks'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="student" org.eventb.core.type="STUDENTS"/>
+<org.eventb.core.poIdentifier name="student_results'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="marks" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPResultMngt_Q4_Cu+)" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTResultMngt_Q4_Cu+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="student∈dom(exam_marks) ∖ dom(resit1_marks)" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="marks∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#&gt;|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="marks≤PASS_MARK" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#&gt;|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPResultMngt_Q4_Cu+" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu+)" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="exam_marks(student)&lt;PASS_MARK" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#&gt;|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="resit2_mark/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu,)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="student∈dom(resit1_marks)∧resit1_marks∈STUDENTS ⇸ ℤ" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#?|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#?|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu,)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="resit2_mark/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="resit2_marks∪{student ↦ marks}∈registered ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#3"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#resit2_mark\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="resit2_mark/inv9/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="student_results∪{student ↦ marks}∈registered ↔ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#?"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#resit2_mark\/inv9\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD6"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTResultMngt_Q4_Cu," org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="54">
+<org.eventb.core.poIdentifier name="student" org.eventb.core.type="STUDENTS"/>
+<org.eventb.core.poIdentifier name="student_results'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="resit2_marks'" org.eventb.core.type="ℙ(STUDENTS×ℤ)"/>
+<org.eventb.core.poIdentifier name="marks" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPResultMngt_Q4_Cu,)" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTResultMngt_Q4_Cu," org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="student∈dom(resit1_marks) ∖ dom(resit2_marks)" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#?|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="marks∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#?|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="marks≤PASS_MARK" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#?|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPResultMngt_Q4_Cu," org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu,)" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="resit1_marks(student)&lt;PASS_MARK" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#?|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="studentquery/inv7/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="card(exam_marks[{student}])+card(resit1_marks[{student}])+card(resit2_marks[{student}])∈ℕ" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#@"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#studentquery\/inv7\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="studentquery/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu-"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(exam_marks[{student}])∧finite(resit1_marks[{student}])∧finite(resit2_marks[{student}])" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#@|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#@|org.eventb.core.action#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu-"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTResultMngt_Q4_Cu-" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="54">
+<org.eventb.core.poIdentifier name="student" org.eventb.core.type="STUDENTS"/>
+<org.eventb.core.poIdentifier name="examsCount'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPResultMngt_Q4_Cu-" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTResultMngt_Q4_Cu-" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="student∈STUDENTS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#@|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="markquery/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu.("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="student_results[{student}]≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈student_results[{student}]⇒b≥x)" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#A|org.eventb.core.guard#*"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#A|org.eventb.core.guard#*"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu.("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="markquery/inv8/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="max(student_results[{student}])∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#A"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poSequent#markquery\/inv8\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="markquery/act1/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of action" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu."/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="student_results[{student}]≠(∅ ⦂ ℙ(ℤ))∧(∃b⦂ℤ·∀x⦂ℤ·x∈student_results[{student}]⇒b≥x)" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#A|org.eventb.core.action#+"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#A|org.eventb.core.action#+"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTALLHYPResultMngt_Q4_Cu."/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTResultMngt_Q4_Cu." org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="54">
+<org.eventb.core.poIdentifier name="student" org.eventb.core.type="STUDENTS"/>
+<org.eventb.core.poIdentifier name="highestScore'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPResultMngt_Q4_Cu.(" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTIDENTResultMngt_Q4_Cu." org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="student∈dom(student_results)" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#A|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finite(student_results[{student}])" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#A|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPResultMngt_Q4_Cu." org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#EVTHYPResultMngt_Q4_Cu.(" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="max(student_results[{student}])∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.event#A|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ResultMngt_Question4/ResultMngt_Q1_Machine.bpo|org.eventb.core.poFile#ResultMngt_Q1_Machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="54">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="registered⊆STUDENTS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="exam_marks∈registered ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="resit1_marks∈registered ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="resit2_marks∈registered ⇸ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#3"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="examsCount∈ℕ" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="highestScore∈MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="student_results∈registered ↔ MARKS" org.eventb.core.source="/ResultMngt_Question4/ResultMngt_Q1_Machine.bum|org.eventb.core.machineFile#ResultMngt_Q1_Machine|org.eventb.core.invariant#7"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

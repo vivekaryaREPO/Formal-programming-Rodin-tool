@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poIdentifier name="AllBooks" org.eventb.core.type="ℙ(AllBooks)"/>
+<org.eventb.core.poIdentifier name="AllChildren" org.eventb.core.type="ℙ(AllChildren)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ChildrensAndBooks_Question1/ChildrensAndBooks_Q1_Ctx.bpo|org.eventb.core.poFile#ChildrensAndBooks_Q1_Ctx|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2"/>
+</org.eventb.core.poFile>

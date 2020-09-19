@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.witness name="'" org.eventb.core.label="element'" org.eventb.core.predicate="element' = elementDeleted'"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="isBufferFull ≔ FALSE" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="isBufferEmpty ≔ TRUE" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="elementDeleted :∈ ELEMENT" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="f ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="b ≔ 0" org.eventb.core.label="act5"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Buffer_ctx"/>
+<org.eventb.core.refinesMachine name=")" org.eventb.core.target="Buffer"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="isBufferFull"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="isBufferEmpty"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="elementDeleted"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="f"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="b"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv1" org.eventb.core.predicate="buffer ∈ ℤ ⇸ ELEMENT"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv2" org.eventb.core.predicate="elementDeleted ∈ ELEMENT"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv4" org.eventb.core.predicate="f = front"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv5" org.eventb.core.predicate="b = back"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv7" org.eventb.core.predicate="isBufferFull ∈ BOOL"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="inv8" org.eventb.core.predicate="isBufferEmpty ∈ BOOL"/>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="empty">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="empty"/>
+<org.eventb.core.witness name="(" org.eventb.core.label="query'" org.eventb.core.predicate="query' = isBufferEmpty'"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="isBufferEmpty :∣ (f=b⇒isBufferEmpty'=TRUE) ∧ (f≠b ⇒isBufferEmpty'=FALSE)" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="full">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="full"/>
+<org.eventb.core.witness name="(" org.eventb.core.label="query'" org.eventb.core.predicate="query' = isBufferFull'"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="isBufferFull :∣ (b−f = maxsize ⇒isBufferFull'=TRUE) ∧ (b−f ≠ maxsize ⇒isBufferFull'=FALSE)" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="remove"/>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="add"/>
+</org.eventb.core.machineFile>

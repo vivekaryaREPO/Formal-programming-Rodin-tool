@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="registered≔∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="exam_marks≔∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="resit1_marks≔∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="resit2_marks≔∅" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="examsCount≔0" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="highestScore:∈ MARKS" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="student_results≔∅" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="registered"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="exam_marks"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="resit1_marks"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="resit2_marks"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="examsCount"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="highestScore"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="student_results"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv1" org.eventb.core.predicate="registered ⊆ STUDENTS"/>
+<org.eventb.core.invariant name="0" org.eventb.core.label="inv2" org.eventb.core.predicate="exam_marks ∈ registered ⇸ MARKS"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="resit1_marks ∈ registered ⇸ MARKS"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv5" org.eventb.core.predicate="resit2_marks ∈ registered ⇸ MARKS"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv7" org.eventb.core.predicate="examsCount ∈ ℕ"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="inv8" org.eventb.core.predicate="highestScore ∈ MARKS"/>
+<org.eventb.core.invariant name="7" org.eventb.core.label="inv9" org.eventb.core.predicate="student_results∈registered↔MARKS"/>
+<org.eventb.core.seesContext name=":" org.eventb.core.target="ResultMngt_Q4_Ctx"/>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="register">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="student"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="student ∈ STUDENTS ∖ registered"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="registered≔registered ∪ {student}" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="exam_mark">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="student"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="marks"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="student∈registered∖dom(exam_marks)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="marks∈MARKS"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="exam_marks≔exam_marks∪{student↦marks}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="student_results≔student_results∪{student↦marks}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="resit1_mark">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="student"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="marks"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="student ∈ dom(exam_marks) ∖ dom(resit1_marks)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="marks ∈ MARKS"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="marks≤PASS_MARK"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="exam_marks(student)&lt;PASS_MARK"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="resit1_marks≔resit1_marks ∪ {student↦marks}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="student_results≔student_results ∪ {student↦marks}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="resit2_mark">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="student"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="marks"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="student ∈ dom(resit1_marks) ∖ dom(resit2_marks)"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="marks∈MARKS"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="marks≤PASS_MARK"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="resit1_marks(student)&lt;PASS_MARK"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="resit2_marks≔resit2_marks∪{student ↦ marks}" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="student_results≔student_results∪{student↦marks}" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="studentquery">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="student"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="student ∈ STUDENTS"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="examsCount ≔ card(exam_marks[{student}]) + card(resit1_marks[{student}]) + card(resit2_marks[{student}])" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="markquery">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="student"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="student ∈ dom(student_results)"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="finite(student_results[{student}])"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="max(student_results[{student}]) ∈ MARKS"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="highestScore ≔ max(student_results[{student}])" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

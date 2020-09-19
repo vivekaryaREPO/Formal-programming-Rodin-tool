@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="booksReadCount ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="hasread ≔ ∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="booksUnread :∈ AllBooks" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="ChildrensAndBooks_Q1_Ctx"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="hasread"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="booksUnread"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="booksReadCount"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="hasread ∈ AllChildren ↔ AllBooks" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="booksUnread ∈ AllBooks" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv3" org.eventb.core.predicate="booksReadCount ∈ ℕ"/>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="record">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="child"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="hasread ≔ hasread ∪ {child ↦ bookread}" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="child ∈ AllChildren"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="bookread"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="bookread ∈ AllBooks" org.eventb.core.theorem="true"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="newbook">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="child"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="child ∈ AllChildren"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="booksUnread :∈ AllBooks ∖ hasread [ {child} ]" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="AllBooks ∖ hasread [ {child} ] ≠ ∅"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="books_query">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="child"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="booksReadCount ≔ card (hasread[{child}])" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="child ∈ AllChildren"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="finite (hasread[{child}])"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
